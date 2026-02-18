@@ -67,6 +67,10 @@ func lecteur(fichier string, workerchans []chan string) {
 		i++
 	}
 
+	for _, ch := range workerchans {
+		close(ch) // fermer les canaux pour signaler la fin de la lecture
+	}
+
 	fmt.Printf("Lecteur a lu %d lignes\n", i)
 
 }
@@ -220,7 +224,7 @@ func main() {
 	}()
 
 	// lancer le lecteur (dans le main)
-	lecteur(filename, workerchans)
+	go lecteur(filename, workerchans)
 	//attendre la durée configuré
 	fmt.Printf("[Main] Attente de %d secondes...\n", duree)
 	time.Sleep(time.Duration(duree) * time.Second)

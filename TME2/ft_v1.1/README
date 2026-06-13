@@ -1,0 +1,32 @@
+FairThreads library - version ft_v1.1 - september 2003
+
+###############################################################
+To compile the library:
+
+1) edit the config file and set the place where fthread.h
+and libfthread.a will be placed. The gcc, make, ar, and ranlib 
+processors can be changed. 
+
+2) go in the directory src and type make. The installation
+will be done.
+   
+3) you can verify that the installation is correct by
+running the tests in the directory tests, or the examples
+in the directory examples.
+
+###############################################################
+Changes with previous ft_v1.0 version:
+
+- The orders issued from ft_scheduler_stop, ft_scheduler_suspend,
+and ft_scheduler_resume are processed in the order in which they
+are issued (no more priority of suspend on resume, or the converse...).
+
+- Schedulers have an access to the next thread to execute in
+constant time (see files itemlist.h and itemlist.c).
+
+- This version is used as target for the compilation of LOFT,
+an experimental language which masks some difficulties of
+FairThreads. It will be available very soon.
+
+###############################################################
+frederic.boussinot@sophia.inria.fr

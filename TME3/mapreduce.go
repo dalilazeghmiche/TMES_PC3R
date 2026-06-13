@@ -1,5 +1,6 @@
 package main
 
+//ZEGHMICHE DALILA && BENATSI FERIEL
 import (
 	"bufio"   // pour lire le fichier ligne par ligne
 	"fmt"     // pour afficher les résultats

@@ -1,0 +1,4 @@
+the link field in thread is not redondant with
+the scheduler field. One can set the scheduler
+and then unlink. 
+

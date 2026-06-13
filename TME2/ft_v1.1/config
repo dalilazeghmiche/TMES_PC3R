@@ -1,0 +1,9 @@
+BASE_DIR = $(HOME)/fairthreads
+VERSION  = ft_v1.1
+
+FT_LIBDIR  = $(BASE_DIR)/lib/$(VERSION)
+FT_INCLDIR = $(BASE_DIR)/include/$(VERSION)
+
+C_COMPILER = gcc
+AR         = ar
+RANLIB     = ranlib
